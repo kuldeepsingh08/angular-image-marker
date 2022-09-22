@@ -29,7 +29,7 @@ export class AppComponent implements OnInit  {
         this.matrixArr[i].push([{ x: element2, y: element }])
       })
     });
-    console.log('checkMatrix', this.matrixArr)
+    // console.log('checkMatrix', this.matrixArr)
   }
 
   checkPosition(x: number, y: number, isMarked: boolean): void {
