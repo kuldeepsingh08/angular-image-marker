@@ -1,0 +1,14 @@
+<div class="wrapper" id="my-img">
+  <!-- <div class="grid-cells" *ngFor="let grid of gridArr; let i = index">
+    <div class="cell" *ngFor="let item of itemsArr; let j = index"
+    (click)="checkPosition(item.id, grid.id, item.isMarked)">
+    <i class="fa fa-times" *ngIf="item.isMarked && grid.isMarked"></i>{{j}},{{i}}
+  </div> 
+  </div> -->
+  <div class="grid-cells" *ngFor="let x of matrixArr;">
+    <div class="cell" *ngFor="let y of x"
+    (click)="y.isMarked = !y.isMarked; checkPositionNew(y)">
+      <i class="fa fa-times" [style.color]="y.isMarked ? 'red' : 'transparent'"></i>
+    </div>
+  </div>
+</div>
