@@ -1,20 +1,21 @@
 
 .wrapper {
-  height: 200px;
-  background-image: url('https://rentaride-customer.test.odm.bmw-fleet.net/assets/media/images/bikes/tiles/R1250GSNEWMODEL.png');
+  height: 130px;
+  background-image: url('./BMWbikeDamage.png');
   background-repeat: no-repeat;
   background-position: center;
   /* width: 200px; */
-  width: 250px;
+  width: 350px;
+  background-size: contain;
   /* cursor: crosshair; */
-  cursor:url('http://www.javascriptkit.com/dhtmltutors/cursor-hand.gif'), crosshair;
+  cursor:url('./BMWbikeDamage.png'), crosshair;
 }
 .grid-cells {
   display: grid;
-  grid-template-columns: repeat(11, 1fr);
+  grid-template-columns: repeat(30, 1fr);
 }
 .cell {
-  border: 1px solid gray;
+  border: 1px solid transparent;
   /* padding: 10px; */
   /* width: 20px; */
   /* height: 20px; */
@@ -22,11 +23,10 @@
   box-sizing: border-box;
   position: relative;
   display: flex;
-}
-.cell i {
-  /* position: absolute; */
-  font-size: 20px;
   align-items: center;
   justify-items: center;
-  color: transparent
+  height: 10.5px; /* container heigth / no. of rows */
+}
+.cell i {
+  color: transparent;
 }

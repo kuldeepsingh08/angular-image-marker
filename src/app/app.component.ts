@@ -11,18 +11,22 @@ interface MATRIX_ARR  {
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent implements OnInit  {
+  // 25-colomns x 20-row;
   name = 'Angular ' + VERSION.major;
-  items = Array.from(Array(11).keys());
-  grid = Array.from(Array(9).keys());
+  items = Array.from(Array(30).keys()); // colomn
+  grid = Array.from(Array(12).keys()); // row
   itemsArr = [];
   gridArr = [];
   matrixArr = [];
+  containerHeigth = 0;
   
   ngOnInit(): void {
-    // const myImg = document.querySelector("#my-img");
-    // console.log('check>>>', myImg.clientWidth);
-    this.items.forEach(element => this.itemsArr.push({ id: element, isMarked: false }))
-    this.grid.forEach(element => this.gridArr.push({ id: element, isMarked: false }))
+    setTimeout(() => {
+      const myImg = document.querySelector("#my-img");
+    console.log('check>>>', myImg.clientHeight);
+    }, 3000)
+    // this.items.forEach(element => this.itemsArr.push({ id: element, isMarked: false }))
+    // this.grid.forEach(element => this.gridArr.push({ id: element, isMarked: false }))
     this.grid.forEach((element, i) => {
       this.matrixArr.push([]);
       this.items.forEach(element2 => {
