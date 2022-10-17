@@ -7,7 +7,7 @@
   width: 350px;
   background-size: contain;
   /* cursor: crosshair; */
-  cursor: url('./icons8-multiply-12.png'), crosshair;
+  cursor: crosshair;
 }
 .grid-cells {
   display: grid;
